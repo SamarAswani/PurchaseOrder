@@ -1,2 +1,2 @@
 # PurchaseOrder
-Purchase order algorithm for Grocamie
+Purchase order generation algorithm for Grocamie

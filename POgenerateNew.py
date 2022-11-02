@@ -304,40 +304,9 @@ end =  """
 
 masterorder += end
 
-# imgkit.from_string(masterorder, 'masterorder:'+id+'.jpg')
-
-# f = open('masterorderNew1.html','w')
-# f.write(masterorder)
-# f.close()
-
 pdfkit.from_string(masterorder, 'masterorder:'+id+'.pdf')
 
-# try:
-#     # create the API client instance
-#     client = pdfcrowd.HtmlToPdfClient('SamarAswani', '7f2ad053b251b1abe1a48d2d48dce1cc')
-#
-#     # run the conversion and write the result to a file
-#     client.convertFileToFile('masterorderNew1.html', 'masterorderNew3.pdf')
-# except pdfcrowd.Error as why:
-#     # report the error
-#     sys.stderr.write('Pdfcrowd Error: {}\n'.format(why))
-#
-#     # rethrow or handle the exception
-#     raise
 
-# try:
-#     # create the API client instance
-#     client = pdfcrowd.HtmlToPdfClient('SamarAswani', '7f2ad053b251b1abe1a48d2d48dce1cc')
-#     print("hello")
-#
-#     # run the conversion and write the result to a file
-#     client.convertStringToFile(masterorder, 'masterorderNew.pdf')
-# except pdfcrowd.Error as why:
-#     # report the error
-#     sys.stderr.write('Pdfcrowd Error: {}\n'.format(why))
-#
-#     # rethrow or handle the exception
-#     raise
 
 
 count=1

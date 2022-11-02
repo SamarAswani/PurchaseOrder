@@ -43,61 +43,6 @@ d2= (date.today()+timedelta(days=7)).strftime("%d.%m.%Y")
 mastercsv = [doc["communityCode"], doc["createdAt"], doc["address"], doc["name"], "Unpaid",[]]
 
 for i in doc["productsList"]:
-    # if i["manufacturer"] == "":
-    #     if i["id"] in ["DVijjWdZh6dI4aemx2wQ", "ffFX3pTFiTK9uA75nsfE", "ATvRht7zglvKkzxOkjB5"]:
-    #         i["manufacturer"] = "MDH"
-    #         # newcsv.append(["MDH",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], ""]])
-    #     elif i["id"] in ["fIXzBwvcnZH8NMOZgSLG", "Cis5h50qVpekrMho1hTA", "fIaSCpvM0yDR3yYJDdaJ", "Q0sS10u3DVKAkTkYzJil", "j6RhBrCCuiEytLYgYLFx", "zD9EPh4ISfKXWRSGr5eK"]:
-    #         i["manufacturer"] = "Adani Wilmar LTD."
-    #         # newcsv.append(["Adani Wilmar LTD.",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Amazon"]])
-    #
-    #     elif i["id"] in ["CjzhfGzGfsoOKDH3nQpg"]:
-    #         i["manufacturer"] = "Dabur"
-    #         # newcsv.append(["Dabur",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Aushta Enterprises"]])
-    #
-    #     elif i["id"] in ["Zv0ooEv5UnqkUc8CXh9M", "QtQcLtbOf0T4jRAfGdUe"]:
-    #         i["manufacturer"] = "NIvea"
-    #         # newcsv.append(["NIvea",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Amazon"]])
-    #
-    #     elif i["id"] in ["It3zpItAu1uLzoMLv4aI", "5Hg9jKKgCi2OFE8JOsn8"]:
-    #         i["manufacturer"] = "ITC"
-    #         # newcsv.append(["ITC",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Aushta Enterprises"]])
-    #
-    #     elif i["id"] in ["5m1cyMPUhTkRoqs5bgxi", "IIkIsC3iB5QzjwT5ymFo", "3fWoZPwwp0oSrVBbZKkT", "0nMyXI0e50oMRBpLfZnw", "7DAndewTDruRtothCOZZ"]:
-    #         i["manufacturer"] = "HUL"
-    #         # newcsv.append(["HUL",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Home Products Pvt Ltd"]])
-    #
-    #     elif i["id"] in ["TyZpcdo1AnnLqOsiNmR8", "sq8DvWmYgGc8i4vG5GJj", "BATFNfvkbHaBVAW814MR", "XFcnantlwgkCvtgTZiXk", "pKwyNs1CfiqO3KeKtZyY", "byYdNNONmjpeBjJQzU83"]:
-    #         i["manufacturer"] = "Tata chemicals Ltd"
-    #         # newcsv.append(["Tata chemicals Ltd",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Amazon"]])
-    #
-    #     elif i["id"] in ["H04HSBRPRexG5hfmtBgE", "9gJth9gYhLj29OYZTXYH", "0Y54C006dUKgRnV735Yn"]:
-    #         i["manufacturer"] = "Nestle Ltd. India"
-    #         # newcsv.append(["Nestle Ltd. India",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Jain Sales Pvt Ltd"]])
-    #
-    #     elif i["id"] in ["N0hV5005CwJT5lDnviXZ"]:
-    #         i["manufacturer"] = "Proctor & Gamble"
-    #         # newcsv.append(["Proctor & Gamble",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Amazon Distributor Pvt Ltd"]])
-    #
-    #     elif i["id"] in ["yhvN91en0pAF13VISTzX"]:
-    #         i["manufacturer"] = "Colgate-Palmolive India Ltd. "
-    #         # newcsv.append(["Colgate-Palmolive India Ltd.",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Jain Sales Pvt Ltd"]])
-    #
-    #     elif i["id"] in ["AKe31kounLABiWO0k7OI", "KbLExG9hkqzw1kY0ZwZp", "1QBlm0Mr5jLkXQIBf8o4"]:
-    #         i["manufacturer"] = "Reckitt Benckiser"
-    #         # newcsv.append(["Reckitt Benckiser",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Affiniti Enterprises"]])
-    #
-    #     elif i["id"] in ["dO9jOAp63P25tooIN5qj"]:
-    #         i["manufacturer"] = "Simbhaoli Sugars Limited"
-    #         # newcsv.append(["Simbhaoli Sugars Limited",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Amazon"]])
-    #
-    #     elif i["id"] in ["CvygINJ88YlMVjvrRssk"]:
-    #         i["manufacturer"] = "Rapid Flour Mills"
-    #         # newcsv.append(["Rapid Flour Mills",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Rapid"]])
-    #
-    #     elif i["id"] in ["hdbdLc3gKS1CN4YlUzGT"]:
-    #         i["manufacturer"] = "Pepsi"
-            # newcsv.append(["Pepsi",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "AG Traders"]])
 
     jsonId = {"id": i["_id"]}
     response = requests.post("http://35.154.244.209:8000/product/productById", json=jsonId)
@@ -114,51 +59,8 @@ for i in doc["productsList"]:
         else:
             continue
     if inArray == False:
-        # newcsv.append(["Grocamie",i["category"],"https://i.ibb.co/h951GHQ/grocamie-logo-ltd3.png",count,d1,d2,[{"name": i["name"], "quantity": i["quantity"], "unit_cost": i["sp"]}],"Thank You!"])
-        # try:
             newcsv.append([ProductManufacturer,d1,d2,[{"name": i["name"], "quantity": str(i["quantity"]), "weight": i["weight"], "mrp": i["mrp"]}], doc["address"], distributorDict[ProductManufacturer.strip().lower()]])
-        # except KeyError:
-            # if i["id"] in ["DVijjWdZh6dI4aemx2wQ", "ffFX3pTFiTK9uA75nsfE", "ATvRht7zglvKkzxOkjB5"]:
-            #     newcsv.append(["MDH",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], ""]])
-            #
-            # elif i["id"] in ["fIXzBwvcnZH8NMOZgSLG", "Cis5h50qVpekrMho1hTA", "fIaSCpvM0yDR3yYJDdaJ", "Q0sS10u3DVKAkTkYzJil", "j6RhBrCCuiEytLYgYLFx", "zD9EPh4ISfKXWRSGr5eK"]:
-            #     newcsv.append(["Adani Wilmar LTD.",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Amazon"]])
-            #
-            # elif i["id"] in ["CjzhfGzGfsoOKDH3nQpg"]:
-            #     newcsv.append(["Dabur",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Aushta Enterprises"]])
-            #
-            # elif i["id"] in ["Zv0ooEv5UnqkUc8CXh9M", "QtQcLtbOf0T4jRAfGdUe"]:
-            #     newcsv.append(["NIvea",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Amazon"]])
-            #
-            # elif i["id"] in ["It3zpItAu1uLzoMLv4aI", "5Hg9jKKgCi2OFE8JOsn8"]:
-            #     newcsv.append(["ITC",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Aushta Enterprises"]])
-            #
-            # elif i["id"] in ["5m1cyMPUhTkRoqs5bgxi", "IIkIsC3iB5QzjwT5ymFo", "3fWoZPwwp0oSrVBbZKkT", "0nMyXI0e50oMRBpLfZnw", "7DAndewTDruRtothCOZZ"]:
-            #     newcsv.append(["HUL",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Home Products Pvt Ltd"]])
-            #
-            # elif i["id"] in ["TyZpcdo1AnnLqOsiNmR8", "sq8DvWmYgGc8i4vG5GJj", "BATFNfvkbHaBVAW814MR", "XFcnantlwgkCvtgTZiXk", "pKwyNs1CfiqO3KeKtZyY", "byYdNNONmjpeBjJQzU83"]:
-            #     newcsv.append(["Tata chemicals Ltd",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Amazon"]])
-            #
-            # elif i["id"] in ["H04HSBRPRexG5hfmtBgE", "9gJth9gYhLj29OYZTXYH", "0Y54C006dUKgRnV735Yn"]:
-            #     newcsv.append(["Nestle Ltd. India",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Jain Sales Pvt Ltd"]])
-            #
-            # elif i["id"] in ["N0hV5005CwJT5lDnviXZ"]:
-            #     newcsv.append(["Proctor & Gamble",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Amazon Distributor Pvt Ltd"]])
-            #
-            # elif i["id"] in ["yhvN91en0pAF13VISTzX"]:
-            #     newcsv.append(["Colgate-Palmolive India Ltd.",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Jain Sales Pvt Ltd"]])
-            #
-            # elif i["id"] in ["AKe31kounLABiWO0k7OI", "KbLExG9hkqzw1kY0ZwZp", "1QBlm0Mr5jLkXQIBf8o4"]:
-            #     newcsv.append(["Reckitt Benckiser",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Affiniti Enterprises"]])
-            #
-            # elif i["id"] in ["dO9jOAp63P25tooIN5qj"]:
-            #     newcsv.append(["Simbhaoli Sugars Limited",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Amazon"]])
-            #
-            # elif i["id"] in ["CvygINJ88YlMVjvrRssk"]:
-            #     newcsv.append(["Rapid Flour Mills",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "Rapid"]])
-            #
-            # elif i["id"] in ["hdbdLc3gKS1CN4YlUzGT"]:
-            #     newcsv.append(["Pepsi",d1,d2,[{"name": i["name"], "quantity": str(i["quantity"])}], doc["address"], "AG Traders"]])
+        
 
 masterorder = """
 <!doctype html>
